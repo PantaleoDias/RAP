@@ -38,6 +38,9 @@ dependencies = [
     "scipy>=1.7.0",
     "pandas>=1.3.0",
     "click>=8.0.0",
+    "streamlit>=1.28.0",
+    "plotly>=5.18.0",
+    "openpyxl>=3.1.0",
 ]
 
 [project.optional-dependencies]
@@ -59,7 +62,7 @@ Repository = "https://github.com/example/rap"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["rap*"]
+include = ["rap*", "app*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

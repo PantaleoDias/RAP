@@ -1,0 +1,247 @@
+/*
+ * RAP Framework - Custom CSS
+ * Identity Visual: SEK (Security Ecosystem Knowledge)
+ */
+
+/* ==========================================================================
+   CSS Variables - SEK Brand Colors
+   ========================================================================== */
+
+:root {
+    --sek-primary: #0A1628;
+    --sek-secondary: #1B3A5F;
+    --sek-accent: #00D4AA;
+    --sek-accent-light: #00E5BB;
+    --sek-text: #FFFFFF;
+    --sek-text-muted: #A0AEC0;
+    --sek-background: #0D1117;
+    --sek-card: #161B22;
+    --sek-border: #30363D;
+    --sek-success: #00D4AA;
+    --sek-warning: #FFA726;
+    --sek-danger: #FF4757;
+    --sek-info: #00B4D8;
+
+    /* Shadows */
+    --sek-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --sek-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --sek-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   Custom Components
+   ========================================================================== */
+
+/* SEK Card */
+.sek-card {
+    background: rgba(22, 27, 34, 0.9);
+    border: 1px solid var(--sek-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    transition: all var(--transition-normal);
+}
+
+.sek-card:hover {
+    border-color: var(--sek-accent);
+    box-shadow: 0 0 20px rgba(0, 212, 170, 0.1);
+}
+
+/* SEK Metric Card */
+.sek-metric-card {
+    background: linear-gradient(135deg, var(--sek-card) 0%, var(--sek-secondary) 100%);
+    border: 1px solid var(--sek-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.sek-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sek-shadow-lg);
+}
+
+.sek-metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--sek-accent);
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+
+.sek-metric-label {
+    font-size: 0.875rem;
+    color: var(--sek-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Gap Status Classes
+   ========================================================================== */
+
+.gap-critical {
+    color: var(--sek-danger) !important;
+}
+
+.gap-high {
+    color: #FF6B6B !important;
+}
+
+.gap-elevated {
+    color: var(--sek-warning) !important;
+}
+
+.gap-moderate {
+    color: #FFD93D !important;
+}
+
+.gap-low {
+    color: var(--sek-success) !important;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes pulse-accent {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 212, 170, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(0, 212, 170, 0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-pulse {
+    animation: pulse-accent 2s infinite;
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+}
+
+/* ==========================================================================
+   Logo and Branding
+   ========================================================================== */
+
+.logo-container {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+    border-bottom: 1px solid var(--sek-border);
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--sek-accent), var(--sek-info));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem;
+    color: var(--sek-text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Risk Level Badges
+   ========================================================================== */
+
+.risk-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.risk-badge-critical {
+    background: rgba(255, 71, 87, 0.2);
+    color: var(--sek-danger);
+}
+
+.risk-badge-high {
+    background: rgba(255, 107, 107, 0.2);
+    color: #FF6B6B;
+}
+
+.risk-badge-elevated {
+    background: rgba(255, 167, 38, 0.2);
+    color: var(--sek-warning);
+}
+
+.risk-badge-moderate {
+    background: rgba(255, 217, 61, 0.2);
+    color: #FFD93D;
+}
+
+.risk-badge-low {
+    background: rgba(0, 212, 170, 0.2);
+    color: var(--sek-success);
+}
+
+/* ==========================================================================
+   Responsive Utilities
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .sek-metric-value {
+        font-size: 1.75rem;
+    }
+
+    .sek-card {
+        padding: 1rem;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .sek-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        color: black !important;
+    }
+
+    .sek-metric-value {
+        color: #00A080 !important;
+    }
+
+    [data-testid="stSidebar"] {
+        display: none !important;
+    }
+}
