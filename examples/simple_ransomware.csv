@@ -1,0 +1,4 @@
+scenario_id,scenario_name,metric_id,metric_name,dimension_id,asset,threat,description,freq_min,freq_most,freq_max,impact_min,impact_most,impact_max,currency
+R001,Ransomware Attack on ERP,01,Tempo de Recuperacao Joias da Coroa,1,ERP System,Ransomware,Ransomware encrypts critical ERP database causing operational disruption,0.1,0.3,0.7,100000,500000,3000000,BRL
+R002,Data Breach via Phishing,07,Resiliencia Humana (Phishing),2,Customer Database,Phishing/Social Engineering,Employee compromised via spear phishing leads to sensitive data exfiltration,0.2,0.5,1.5,50000,200000,1000000,BRL
+R003,Supply Chain Compromise,22,Seguranca da Cadeia de Suprimentos,7,Software Dependencies,Supply Chain Attack,Malicious code introduced via compromised third-party software dependency,0.05,0.15,0.4,200000,800000,5000000,BRL

@@ -1,0 +1,13 @@
+metric_id,layer,score,target_value,actual_value,confidence,evidence,notes,assessor,assessment_date
+01,business_strategy,8.0,2.0,,0.9,BIA document v2.3,RTO target for ERP system: 2 hours,CISO,2024-01-15
+01,strategy_risk_governance,7.0,,,0.8,DR Plan v1.5 and Backup Policy,DR procedures documented and tested quarterly,GRC Team,2024-01-20
+01,offensive_security,5.0,,4.0,0.95,Ransomware simulation report 2024-01,Actual recovery took 4 hours vs 2 hour target,Red Team,2024-01-25
+03,business_strategy,9.0,0,,0.85,Security Policy SP-003,Zero tolerance for credential compromise,CISO,2024-01-15
+03,strategy_risk_governance,7.5,,,0.8,PAM implementation audit report,PAM deployed for 85% of privileged accounts,GRC Team,2024-01-20
+03,offensive_security,6.0,,2,0.9,Credential theft simulation report,2 privileged accounts compromised in test,Red Team,2024-01-25
+07,business_strategy,7.0,5,,0.8,Security Awareness Policy,Target: less than 5% phishing click rate,Security Manager,2024-01-15
+07,strategy_risk_governance,6.5,,,0.75,Training completion reports,Quarterly awareness training 90% completion,GRC Team,2024-01-20
+07,offensive_security,4.0,,15,0.95,Phishing campaign results Q4,15% click rate on simulated phishing,Red Team,2024-01-25
+22,business_strategy,8.0,,,0.8,Supply chain security requirements,SBOM required for all critical software,CISO,2024-01-15
+22,strategy_risk_governance,5.0,,,0.7,Vendor assessment records,Only 40% of vendors have security assessments,GRC Team,2024-01-20
+22,offensive_security,4.5,,3,0.85,Supply chain attack simulation,3 vulnerable dependencies identified,Red Team,2024-01-25
